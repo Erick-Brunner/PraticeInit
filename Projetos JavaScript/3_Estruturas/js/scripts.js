@@ -118,7 +118,7 @@ for(let u = 0; u < 10; u++){
 for(let g = 20; g > 10 ; g--){
     console.log(`O valor de g é : ${g}`)
     if(g === 15) {
-        console.log(`Og é 15!`)
+        console.log(`O g é 15!`)
         break;
     }
 }
