@@ -122,73 +122,103 @@
 // console.log(subArray3);
 // const subArray4 = testeSlice.slice(2);
 // console.log(subArray4);
-// 15- forEach
-const nums = [1, 2, 3, 4, 5]
-nums.forEach((numero) => {
-    console.log(`O número é ${numero}`);
-});
-const posts = [
-    {title: "Primerio post", category: "PHP"},
-    {title: "Segundo post", category: "JavaScript"},
-    {title: "Terceiro post", category: "Python"},
-];
-posts.forEach((post) =>{
-    console.log(`Exbindo post: ${post.title}, da categoria: ${post.category}`);
-});
-// 16- includes
-const brands = ["BMW", "VW", "Fiat"]
-console.log(brands.includes("Fiat"));
-console.log(brands.includes("KIA"));
-if(brands.includes("BMW")){
-    console.log("Há carros da marca BMW!");
+// // 15- forEach
+// const nums = [1, 2, 3, 4, 5]
+// nums.forEach((numero) => {
+//     console.log(`O número é ${numero}`);
+// });
+// const posts = [
+//     {title: "Primerio post", category: "PHP"},
+//     {title: "Segundo post", category: "JavaScript"},
+//     {title: "Terceiro post", category: "Python"},
+// ];
+// posts.forEach((post) =>{
+//     console.log(`Exbindo post: ${post.title}, da categoria: ${post.category}`);
+// });
+// // 16- includes
+// const brands = ["BMW", "VW", "Fiat"]
+// console.log(brands.includes("Fiat"));
+// console.log(brands.includes("KIA"));
+// if(brands.includes("BMW")){
+//     console.log("Há carros da marca BMW!");
+// }
+// // 17- reverse
+// const reverseTest = [1, 2, 3, 4, 5]
+// reverseTest.reverse();
+// console.log(reverseTest);
+// // 18- trim
+// const trimTest = "    testando n"
+// console.log(trimTest);
+// console.log(trimTest.trim());
+// console.log(trimTest.length);
+// console.log(trimTest.trim().length);
+// // 19- padStart
+// const testePadStart = "1"
+// const newNumber = testePadStart.padStart(4,"0");
+// console.log(testePadStart);
+// console.log(newNumber);
+// const testePadEnd = newNumber.padEnd(10, "0");
+// console.log(testePadEnd);
+// // 20- split
+// const frase = "O rato roeu a roupa do rei de Roma"
+// const arraydafrase = frase.split(" ");
+// console.log(arraydafrase);
+// // 21- join
+// const fraseDenovo = arraydafrase.join(" ");
+// console.log(fraseDenovo);
+// const itensParaComprar = ["Mause", "Teclado", "Monitor"]
+// const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`;
+// console.log(fraseDeCompra);
+// // 22- repeat
+// const palavra = "Testando ";
+// console.log(palavra.repeat(5));
+// // 23- rest operator
+// const somaInfinita = (...args) => {
+//     let total = 0
+//     for(let i = 0; i < args.length; i++) {
+//         total += args[i];
+//     }
+//     return total;
+// };
+// console.log(somaInfinita(1, 2, 3));
+// console.log(somaInfinita(1, 20, 34, 34343, 54645, 7568456, 3434, 6567, 8786));
+// // 24- fot of
+// const somaInfinita2 = (...args) => {
+//     let total = 0;
+//     for (num of args) {
+//         total += num;
+//     }
+//     return total;
+// }
+// console.log(somaInfinita2(1, 2, 3));
+// console.log(somaInfinita2(10, 20, 30));
+// 25- destructurning em objetos
+const userDetails = {
+    firstName: "Erick", lastName: "Bruner", job:"Bartender"
 }
-// 17- reverse
-const reverseTest = [1, 2, 3, 4, 5]
-reverseTest.reverse();
-console.log(reverseTest);
-// 18- trim
-const trimTest = "    testando n"
-console.log(trimTest);
-console.log(trimTest.trim());
-console.log(trimTest.length);
-console.log(trimTest.trim().length);
-// 19- padStart
-const testePadStart = "1"
-const newNumber = testePadStart.padStart(4,"0");
-console.log(testePadStart);
-console.log(newNumber);
-const testePadEnd = newNumber.padEnd(10, "0");
-console.log(testePadEnd);
-// 20- split
-const frase = "O rato roeu a roupa do rei de Roma"
-const arraydafrase = frase.split(" ");
-console.log(arraydafrase);
-// 21- join
-const fraseDenovo = arraydafrase.join(" ");
-console.log(fraseDenovo);
-const itensParaComprar = ["Mause", "Teclado", "Monitor"]
-const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}.`;
-console.log(fraseDeCompra);
-// 22- repeat
-const palavra = "Testando ";
-console.log(palavra.repeat(5));
-// 23- rest operator
-const somaInfinita = (...args) => {
-    let total = 0
-    for(let i = 0; i < args.length; i++) {
-        total += args[i];
-    }
-    return total;
-};
-console.log(somaInfinita(1, 2, 3));
-console.log(somaInfinita(1, 20, 34, 34343, 54645, 7568456, 3434, 6567, 8786));
-// 24- fot of
-const somaInfinita2 = (...args) => {
-    let total = 0;
-    for (num of args) {
-        total += num;
-    }
-    return total;
-}
-console.log(somaInfinita2(1, 2, 3));
-console.log(somaInfinita2(10, 20, 30));
+const {firstName, lastName, job} = userDetails;
+console.log(firstName, lastName, job);
+// renomear variaveis
+const {firstName: primeiroNome } = userDetails;
+console.log(firstName);
+// 26- destructurning com arrays
+const myList = ["Avião", "Submarino", "Carro", "Trator"];
+const [veiculoA, veiculoB, veiculoC] = myList;
+console.log(veiculoA, veiculoB, veiculoC);
+// 27- JASON
+const myJson = '{"name": "Ercik", "age": 23, "skills": ["PHP", "JavaScript", "Python"]}';
+console.log(myJson);
+console.log(typeof myJson);
+// 28- JSON para objeto e objeto para JSON
+const myObject = JSON.parse(myJson);
+console.log(myObject);
+console.log(myObject.name);
+console.log(typeof myObject);
+// json invalido
+const badJson = '{"name": Erick, "age": 23}';
+// const myBadObjetc = JSON.parse(badJson);
+myObject.isOpenToWork = true;
+console.log(myObject);
+const myNewJson = JSON.stringify(myObject);
+console.log(myNewJson);
+console.log(typeof myNewJson);
